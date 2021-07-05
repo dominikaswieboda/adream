@@ -1,0 +1,19 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+.logo {
+  margin-top: -3px;
+  span {
+    display: block;
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: $text-light;
+    @include respond-to('xl') {
+      font-size: 38px;
+      line-height: 48px;
+    }
+  }
+}

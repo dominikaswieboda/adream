@@ -1,0 +1,245 @@
+@import "variables";
+@import "mixins";
+.walletIcon {
+  .a {
+    fill: #ffcc48;
+  }
+
+  .b, .c {
+    fill: none;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .b {
+    stroke-width: 2.885px;
+  }
+
+  .c {
+    stroke-width: 3px;
+  }
+}
+
+.coffieIcon {
+  .a {
+    fill: #ffcc48;
+  }
+
+  .b, .d {
+    fill: none;
+  }
+
+  .b, .c, .e {
+    stroke: #000;
+  }
+
+  .b, .c, .d, .e {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3px;
+  }
+
+  .d {
+    stroke: #fff;
+  }
+
+  .e {
+    fill: #fff;
+  }
+}
+
+.commodeIcon {
+  .a {
+    fill: #ffcc48;
+  }
+}
+
+.workerIcon {
+  .a {
+    fill: #ffcc48;
+  }
+
+  .b {
+    fill: none;
+  }
+
+  .b, .c {
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3px;
+  }
+}
+
+.deskIcon {
+  .a {
+    fill: #ffcc48;
+  }
+
+  .b, .d {
+    fill: none;
+  }
+
+  .b {
+    stroke: #000;
+    stroke-width: 3px;
+  }
+
+  .b, .c, .d {
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+  }
+
+  .e, .f {
+    stroke: none;
+  }
+
+  .f {
+    fill: #000;
+  }
+}
+
+.roomIcon {
+  .a {
+    fill: #ffcc48;
+  }
+
+  .b, .g {
+    fill: none;
+  }
+
+  .b, .c, .d, .e {
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .b, .c, .d {
+    stroke-width: 3px;
+  }
+
+  .d, .e {
+    fill: #fff;
+  }
+
+  .f {
+    stroke: none;
+  }
+}
+
+.peopleIcon {
+  .a {
+    fill: #ffcc48;
+  }
+
+  .b, .c, .d {
+    stroke: #000;
+  }
+
+  .b, .c, .d, .e {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3px;
+  }
+
+  .c {
+    fill: #fff;
+  }
+
+  .d, .e {
+    fill: none;
+  }
+
+  .e {
+    stroke: #fff;
+  }
+}
+
+.instagramIcon {
+  .a {
+    fill: #fff;
+  }
+}
+
+.facebookIcon {
+  .a {
+    fill: #fff;
+  }
+}
+
+.nextArrowIcon {
+  @include respond-to('md') {
+    width: 100px;
+    height: 80px;
+  }
+  .a {
+    fill: #fff;
+  }
+
+  .b {
+    clip-path: url(#a);
+  }
+
+  .c {
+    opacity: 0;
+  }
+
+  .d, .e {
+    fill: none;
+    stroke: #000;
+    stroke-linecap: square;
+    stroke-width: 3px;
+  }
+
+  .d {
+    stroke-linejoin: round;
+  }
+}
+
+.prevArrowIcon {
+  @include respond-to('md') {
+    width: 100px;
+    height: 80px;
+  }
+  .a {
+    fill: #fff;
+  }
+
+  .b {
+    clip-path: url(#a);
+  }
+
+  .c {
+    opacity: 0;
+  }
+
+  .d, .e {
+    fill: none;
+    stroke: #000;
+    stroke-linecap: square;
+    stroke-width: 3px;
+  }
+
+  .d {
+    stroke-linejoin: round;
+  }
+}
+
+.detalIcon {
+  .a {
+    fill: #020203;
+  }
+}
+
+.detalHorizontalIcon {
+  .a {
+    fill: #fff;
+  }
+}
+
+.logo {
+  .a {
+    fill: #fff;
+  }
+}

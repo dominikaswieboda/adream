@@ -1,0 +1,94 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+
+.btn {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  min-width: 145px;
+  transition: $transition-base;
+  z-index: 2;
+  @include respond-to('md') {
+    min-width: 100px;
+  }
+
+}
+
+.btnPrimary {
+  background-color: $bg-main;
+  height: 118px;
+  @include respond-to('md') {
+    height: 80px;
+  }
+  &::before {
+    background-color: $bg-dark;
+  }
+}
+.btnSecondary {
+  z-index: 1;
+  background-color: $bg-dark;
+  color: $text-light;
+  min-width: 100%;
+  left: 0;
+  padding: 13px 15px;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include respond-to('md') {
+    font-size: 16px;
+  }
+  @include respond-to('sm') {
+    font-size: 14px;
+  }
+  &::before {
+    background-color: $yellow;
+  }
+}
+.btnHover {
+  svg {
+    path {
+      transition: $transition-base;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    transition: $transition-base;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
+  }
+}
+
+.btnBeforeLeft {
+  &::before {
+    right: 0;
+  }
+}
+
+.btnBeforeRight {
+  &::before {
+    left: 0;
+  }
+}

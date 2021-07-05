@@ -1,0 +1,56 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+
+.form {
+  position: absolute;
+  left: 50%;
+  top: 180px;
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
+  @include respond-to('xl') {
+    position: unset;
+    left: unset;
+    transform: unset;
+  }
+}
+
+.formGroup {
+  & + .formGroup {
+    margin-top: 20px;
+  }
+}
+
+.formContent {
+  padding: 30px 36px 33px 30px;
+  background-color: $bg-main;
+  max-width: 449px;
+  width: 100%;
+  margin-left: auto;
+  pointer-events: all;
+  @include respond-to('xl') {
+    margin-left: 0;
+    padding: 30px 0;
+    max-width: 100%;
+  }
+}
+
+.formDescription {
+  margin-bottom: 30px;
+
+  span {
+    display: block;
+    font-size: 18px;
+    color: $gray;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-weight: 700;
+  }
+}
+
+.formGroupButton {
+  margin-top: 4px;
+}

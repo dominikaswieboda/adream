@@ -1,0 +1,102 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+.detal {
+  position: relative;
+}
+
+.content {
+  position: relative;
+  height: 642px;
+  @include respond-to('xxl') {
+    height: 520px;
+  }
+  @include respond-to('xl') {
+    height: 420px;
+  }
+  @include respond-to('lg') {
+    height: 322px;
+  }
+  @include respond-to('md') {
+    height: 222px;
+  }
+}
+
+.info {
+  width: 100%;
+  height: 100%;
+}
+
+.containerOverflow {
+  position: relative;
+  overflow: visible;
+}
+.icon {
+  position: absolute;
+  top: -71px;
+  right: 14px;
+  z-index: 2;
+  svg {
+    @include respond-to('md') {
+      width: 150px;
+      height: 143px;
+    }
+    @include respond-to('sm') {
+      width: 100px;
+      height: 130px;
+    }
+  }
+}
+.heading {
+  position: relative;
+  background-color: $bg-main;
+  padding: 221px 116px 78px 0;
+  max-width: 640px;
+  @include respond-to('xxl') {
+    padding: 182px 116px 78px 0;
+  }
+  @include respond-to('xl') {
+    background-color: transparent;
+    padding: 46px 111px 72px 0;
+    max-width: 450px;
+  }
+  @include respond-to('md') {
+    padding: 20px 100px 40px 0;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -113px;
+    left: 0;
+    height: 20px;
+    width: 610px;
+    background-color: $bg-dark;
+    @include respond-to('xxl') {
+      bottom: -80px;
+    }
+    @include respond-to('xl') {
+      bottom: -40px;
+    }
+    @include respond-to('lg') {
+      bottom: 0;
+      width: 400px;
+    }
+    @include respond-to('sm') {
+      max-width: 300px;
+    }
+
+  }
+  h1 {
+    color: $text-main;
+    line-height: 75px;
+    @include respond-to('xl') {
+      line-height: 50px;
+    }
+    @include respond-to('md') {
+      line-height: 38px;
+    }
+    @include respond-to('sm') {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+}

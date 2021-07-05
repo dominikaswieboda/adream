@@ -1,0 +1,197 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+.offer {
+  padding: 130px 0 0;
+  @include respond-to('xl') {
+    padding: 60px 0;
+  }
+}
+
+.offerItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  @include respond-to('md') {
+    flex-direction: column;
+  }
+}
+
+.offerItem {
+  position: relative;
+  background-color: gray;
+  height: 495px;
+  width: calc(100% / 2 - 15px);
+  margin: 15px 0;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @include respond-to('xl') {
+    height: 365px;
+  }
+  @include respond-to('lg') {
+    height: 250px;
+  }
+  @include respond-to('md') {
+    width: 100%;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($bg-main, 0.25);
+    z-index: 0;
+  }
+  button {
+    min-width: 130px;
+    height: 130px;
+    @include respond-to('xl') {
+      height: 80px;
+      min-width: 80px;
+    }
+    svg {
+      width: 130px;
+      height: inherit;
+      @include respond-to('xl') {
+        width: 80px;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      transition: $transition-base;
+      z-index: -1;
+    }
+    svg {
+      path {
+        transition: $transition-base;
+      }
+    }
+  }
+  &:hover {
+    .offerWrapper {
+      transform: scale(1.2);
+    }
+    button {
+      &::before {
+        width: 100%;
+      }
+
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
+    }
+  }
+}
+.offerWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+.offerItemSmall {
+  height: 362px;
+  @include respond-to('xl') {
+    height: 290px;
+  }
+  .offerItemContent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include respond-to('lg') {
+      align-items: flex-start;
+    }
+    button {
+      @include respond-to('lg') {
+        align-self: flex-end;
+      }
+    }
+    .offerCardInfo {
+      margin-bottom: 29px;
+    }
+  }
+}
+
+.offerItemContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  button {
+    margin-left: auto;
+  }
+}
+
+.offerCardInfo {
+  padding: 35px 24px 25px 35px;
+  background-color: $bg-main;
+  margin: 29px 0 0 29px;
+  min-width: 223px;
+  max-width: 324px;
+  @include respond-to('xl') {
+    padding: 24px;
+    background-color: #fff;
+    margin: 20px 0 0 20px;
+    min-width: 200px;
+    max-width: 208px;
+  }
+  @include respond-to('sm') {
+    min-width: 100px;
+    max-width: 160px;
+  }
+  h3 {
+    position: relative;
+    padding-bottom: 28px;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 42px;
+      height: 42px;
+      background-color: $yellow;
+      z-index: -1;
+      @include respond-to('xl') {
+        width: 36px;
+        height: 36px;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 49px;
+      height: 5px;
+      background-color: $bg-dark;
+    }
+  }
+  p {
+    margin-top: 7px;
+    letter-spacing: 0.4px;
+    color: $custom-dark;
+  }
+}

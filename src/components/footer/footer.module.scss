@@ -1,0 +1,143 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+.footer {
+  background-color: $bg-dark;
+  a {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $text-light;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+.content {
+padding: 0 0 45px;
+}
+.containerOverflow {
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+.detal {
+  position: absolute;
+  right: 0;
+  top: -30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+
+}
+.logo {
+  padding-top:90px;
+  span {
+    font-size: 65px;
+  }
+}
+
+.items {
+  display: flex;
+  margin-top: 49px;
+  width: 100%;
+  @include respond-to('sm') {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.item {
+  & + .item {
+    margin-left: 492px;
+    @include respond-to('xl') {
+      margin-left: 190px;
+    }
+    @include respond-to('sm') {
+      margin-left: 0;
+      margin-bottom: 80px;
+      order: -1;
+    }
+  }
+}
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @include respond-to('md') {
+    flex-direction: column;
+  }
+}
+.navItem {
+  display: flex;
+  flex-direction: column;
+  a {
+    & + a {
+      margin-top: 22px;
+    }
+  }
+  & + .navItem {
+    margin-left: 182px;
+    @include respond-to('xl') {
+      margin-left: 80px;
+    }
+    @include respond-to('md') {
+      margin-left: 0;
+      margin-top: 22px;
+    }
+  }
+}
+.address {
+  margin-bottom: 29px;
+   p {
+     font-size: 16px;
+     font-weight: 400;
+     line-height: 26px;
+     color: $text-light;
+   }
+}
+
+.contact {
+  a {
+    display: block;
+    font-weight: 600;
+    a {
+      margin-top: 10px;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 140px;
+  @include respond-to('sm') {
+    align-items: flex-start;
+  }
+  span {
+    display: block;
+    font-size: 12px;
+    line-height: 28px;
+    color: $text-light;
+    width: 50%;
+    &:last-child {
+      text-align: right;
+    }
+  }
+  a {
+    font-size: inherit;
+  }
+  svg {
+    path {
+      transition: $transition-base;
+    }
+    &:hover {
+      path {
+        fill: $yellow;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+
+.progressBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 118px;
+  @include respond-to('md') {
+    height: 80px;
+  }
+  @include respond-to('sm') {
+    padding-left:15px;
+  }
+
+  span {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: $text-light;
+  }
+}
+
+.progress {
+  background-color:$bg-dark;
+  border-radius: 10px;
+  height: 6px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+  width: 208px;
+  @include respond-to('md') {
+    width: 115px;
+  }
+
+}
+.progressStatus {
+  background-color: $bg-main;
+  border-radius: 10px;
+  height: 100%;
+  width: 0;
+  line-height: 30px;
+  position: absolute;
+}
+
+.progressAnimation {
+  animation-name: progress;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

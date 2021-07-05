@@ -1,0 +1,38 @@
+//Variables
+$black: #000;
+$custom-dark: #040506;
+$white: #fff;
+$gray: #727272;
+$light-grey: #919191;
+$yellow: #ffcc48;
+
+//Accent color
+$accent-color: $yellow;
+
+//Background colors
+$bg-main: $white;
+$bg-dark: $black;
+
+//Text colors
+$text-main: $black;
+$text-custom-dark: $custom-dark;
+$text-light: $white;
+
+//Hover
+$hover: $accent-color;
+$hover-dark: $black;
+
+//Transition
+$transition-base: all 0.3s ease-in-out;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+        'xs': 0,
+        'sm': 576px,
+        'md': 768px,
+        'lg': 992px,
+        'xl': 1430px,
+        'xxl': 1655px
+) !default

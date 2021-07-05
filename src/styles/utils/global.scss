@@ -1,0 +1,36 @@
+@import "../utils/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: $bg-main;
+  color: $text-main;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: $transition-base;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}

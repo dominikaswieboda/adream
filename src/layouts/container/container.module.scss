@@ -1,0 +1,36 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+.container {
+  width: 1600px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow: hidden;
+  @include respond-to('xxl') {
+    max-width: 1330px;
+    //background-color: gray;
+  }
+  @include respond-to('xl') {
+    max-width: 950px;
+    //background-color: yellow;
+  }
+  @include respond-to('lg') {
+    max-width: 715px;
+    //background-color: green;
+  }
+  @include respond-to('md') {
+    max-width: 550px;
+    //background-color: pink;
+  }
+  @include respond-to('sm') {
+    width: 450px;
+    max-width: 100%;
+    //background-color: blue;
+  }
+
+
+
+
+}

@@ -1,0 +1,134 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+.benefits {
+  padding-bottom: 212px;
+  padding-top: 120px;
+  @include respond-to('xl') {
+    padding-top: 0;
+    padding-bottom: 120px;
+  }
+}
+
+.items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.itemHeading {
+  align-self: flex-end;
+  padding-bottom: 32px;
+  h2 {
+    position: relative;
+    padding-bottom: 54px;
+    max-width: 290px;
+    @include respond-to('lg') {
+      max-width: 100%;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 130px;
+      height: 10px;
+      background-color: $bg-dark;
+    }
+  }
+}
+.item {
+  width: calc(100% / 4);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @include respond-to('xl') {
+    width: calc(100% / 3);
+  }
+  @include respond-to('md') {
+    width: 50%;
+  }
+  &:nth-child(1) {
+    @include respond-to('lg') {
+      width: 100%;
+    }
+  }
+  & + .item {
+    @include respond-to('lg') {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &:nth-child(n+5) {
+   .itemIcon {
+     margin-top: 91px;
+     @include respond-to('lg') {
+       margin-top: 30px;
+     }
+     h3 {
+       margin-top: 29px;
+     }
+   }
+  }
+  h3 {
+    font-weight: 400;
+    max-width: 290px;
+    margin-top: 55px;
+    margin-bottom: 30px;
+    @include respond-to('lg') {
+      max-width: 200px;
+      margin-top: 25px;
+      margin-bottom: 0;
+    }
+    @include respond-to('sm') {
+      max-width: 150px;
+    }
+
+  }
+}
+.itemIcon {
+  height: 120px;
+  margin-top: 109px;
+  @include respond-to('lg') {
+    margin-top: 20px;
+  }
+  @include respond-to('sm') {
+    height: 80px;
+  }
+  svg {
+    @include respond-to('sm') {
+      height: 80px;
+      width: 80px;
+    }
+  }
+}
+.benefitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 380px;
+  margin-top: 60px;
+  padding: 25px 25px 25px 30px;
+  @include respond-to('md') {
+    min-width: 100%;
+    padding: 20px;
+  }
+  span {
+    display: block;
+    line-height: 0;
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: $white;
+    }
+  }
+  &:hover {
+    color: $black;
+    &::before {
+      width: 80%;
+      @include respond-to('md') {
+        width: 82%;
+      }
+    }
+  }
+}

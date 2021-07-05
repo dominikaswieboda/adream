@@ -1,0 +1,44 @@
+@import "../../styles/utils/variables";
+@import '../../styles/utils/mixins';
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  transition: $transition-base;
+}
+.scrolled {
+  transition: $transition-base;
+  background-color: $bg-dark;
+  .content {
+    padding: 15px 0;
+  }
+  .navLink {
+    font-size: 12px;
+  }
+  .socialIcon {
+    &:hover {
+      background-color: $bg-dark;
+      svg {
+        path {
+          fill: $yellow;
+        }
+      }
+    }
+  }
+}
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 44px 0 0;
+  width: 100%;
+  transition: $transition-base;
+  @include respond-to('lg') {
+    justify-content: space-between;
+  }
+  @include respond-to('md') {
+    padding: 15px 0;
+  }
+}
