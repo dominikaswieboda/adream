@@ -4,7 +4,8 @@ import {Link} from "gatsby";
 import FacebookIcon from "../../assets/icons/fb.svg";
 import InstagramIcon from "../../assets/icons/instagram.svg";
 import Logo from "../logo/logo";
-import {useBreakpoint } from 'gatsby-plugin-breakpoints';
+import {useBreakpoint} from 'gatsby-plugin-breakpoints';
+
 const Menu = ({open, classname, breakpointL, ...props}) => {
     const isHidden = open ? true : false;
     const tabIndex = isHidden ? 0 : -1;

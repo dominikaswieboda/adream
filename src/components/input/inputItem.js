@@ -1,7 +1,8 @@
 import * as React from 'react';
 import * as styles from './input.module.scss'
-export default function InputItem({label, name, type= 'text',  error, ...props}) {
-    return(
+
+export default function InputItem({label, name, type = 'text', error, ...props}) {
+    return (
         <div className={styles.inputLayout}>
             <input
                 name={name}

@@ -4,6 +4,7 @@ import {useStaticQuery, graphql} from "gatsby"
 import Img from "gatsby-image";
 import DetalIcon from '../../assets/icons/detalIcon.svg';
 import Container from "../../layouts/container/container";
+
 export default function Detal() {
 
     const dataDetal = useStaticQuery(graphql`
@@ -17,7 +18,7 @@ export default function Detal() {
     }
   }
     `)
-    return(
+    return (
         <section className={styles.detal}>
             <div className={styles.content}
                  data-sal="slide-left"
@@ -40,18 +41,17 @@ export default function Detal() {
                     }}
                 />
                 <div className={styles.info}>
-                <Container
-                    classname={styles.containerOverflow}
-                >
-                    <div className={styles.icon}>
-                        <DetalIcon />
-                    </div>
-                    <div className={styles.heading}>
-                        <h1>Lorem ipsum vs własne biuro</h1>
-                    </div>
-                </Container>
+                    <Container
+                        classname={styles.containerOverflow}
+                    >
+                        <div className={styles.icon}>
+                            <DetalIcon/>
+                        </div>
+                        <div className={styles.heading}>
+                            <h1>Lorem ipsum vs własne biuro</h1>
+                        </div>
+                    </Container>
                 </div>
-
             </div>
         </section>
     )

@@ -11,7 +11,7 @@ import Gallery from "../components/gallery/gallery";
 const IndexPage = () => (
     <Layout>
         <Banner/>
-        <Offer />
+        <Offer/>
         <Benefits/>
         <Detal/>
         <Article/>

@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styles from './termCheckBox.module.scss';
 
-export function TermCheckBox({ children, name, checked, onchange, ...props }) {
+export function TermCheckBox({children, name, checked, onchange, ...props}) {
 
     return (
         <div className={styles.checkbox}>

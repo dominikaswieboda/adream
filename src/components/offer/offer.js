@@ -90,8 +90,8 @@ export default function Offer() {
                         className={`${styles.offerItem} ${styles.offerItemSmall}`}
                         data-sal="slide-right"
                         data-sal-duration="1000"
-                        data-sal-easing="ease" >
-                    >
+                        data-sal-easing="ease">
+                        >
                         <div className={styles.offerWrapper}>
                             <Img
                                 fluid={dataOffer.allFile.edges[0].node.childImageSharp.fluid}
@@ -119,8 +119,8 @@ export default function Offer() {
                         className={`${styles.offerItem} ${styles.offerItemSmall}`}
                         data-sal="slide-left"
                         data-sal-duration="1000"
-                        data-sal-easing="ease" >
-                    >
+                        data-sal-easing="ease">
+                        >
                         <div className={styles.offerWrapper}>
                             <Img
                                 fluid={dataOffer.allFile.edges[1].node.childImageSharp.fluid}
